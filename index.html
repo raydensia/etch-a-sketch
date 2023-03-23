@@ -12,14 +12,18 @@
         <div id="header">Pixels</div>
         <div id="content">
             <div id="options">
-                <span><input id="colorPicker" type="color"></span>
-                <button id="colorBtn">Color mode</button>
-                <button id="randomBtn">Random mode</button>
-                <button id="eraserBtn">Eraser</button>
-                <button id="clearBtn">Clear</button>
-                <div id="gridSize">__ x __</div>
-                <input id="gridSlider" type="range" min="0" max="50">
-                <button id="gridBtn">Show Grid</button>
+                <input id="colorPicker"  type="color">
+                <button id="colorBtn" class="active" onclick="colorMode()">Color mode</button>
+                <button id="randomBtn" onclick="randomMode()">Random mode</button>
+                <button id="eraserBtn" onclick="eraser()">Eraser</button>
+                <button id="clearBtn" onclick="clear()">Clear</button>
+                <div id="dangerBtns">
+                    <div id="gridSizeText">16 x 16</div>
+                    <input id="gridSlider" type="range" min="0" max="50" value="16">
+                    <button id="gridBtn" onclick="toggleGrid()">Hide Grid</button>
+                    <em>⚠ WARNING ⚠</em>
+                    <em>RESETS DRAWING</em>
+                </div>
             </div>
             <div id="etch-a-sketch"></div>
         </div>
