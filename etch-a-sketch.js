@@ -85,7 +85,6 @@ function toggleGrid() {
 }
 
 function changeColor(e) {
-    console.log('clicked');
     if (e.type == 'mouseover' && !mouseDown) return;
     if (currentMode == 'random') {
         const randomR = Math.floor(Math.random() * 256)
